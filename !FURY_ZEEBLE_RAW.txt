@@ -1,0 +1,81 @@
+{
+    ["Variables"] = {
+        ["Charge"] = {
+            [1] = "/targetenemy [dead][noharm]",
+            [2] = "/cast [combat] Charge",
+            [3] = "/castsequence [nocombat,exists]   reset=combat  Charge, Bloodthirst, null"
+        },
+        ["RagingBlow"] = {
+            [1] = "/cast [exists] Raging Blow"
+        },
+        ["Stancecheck"] = {
+            [1] = "/targetenemy [noharm][dead]",
+            [2] = "/startattack"
+        },
+        ["Execute"] = {
+            [1] = "/cast [exists] Execute"
+        },
+        ["Rampage"] = {
+            [1] = "/cast [exists] Rampage"
+        }
+    },
+    ["Actions"] = {
+        [1] = {
+            [1] = {
+                [1] = "~~Stancecheck~~",
+                [2] = "/cast [exists] Rampage",
+                [3] = "~~Execute~~",
+                [4] = "~~Charge~~",
+                ["Type"] = "Action"
+            },
+            [2] = {
+                [1] = {
+                    [1] = "~~Stancecheck~~",
+                    [2] = "/cast [exists] Rampage",
+                    [3] = "~~Execute~~",
+                    [4] = "~~Charge~~",
+                    ["Type"] = "Action"
+                },
+                [2] = {
+                    [1] = "~~Stancecheck~~",
+                    [2] = "/cast [exists] Execute",
+                    [3] = "~~Rampage~~",
+                    [4] = "~~Charge~~",
+                    ["Type"] = "Action"
+                },
+                [3] = {
+                    [1] = "~~Stancecheck~~",
+                    [2] = "/cast [exists] Onslaught",
+                    [3] = "~~Rampage~~",
+                    [4] = "~~Charge~~",
+                    ["Type"] = "Action"
+                },
+                [4] = {
+                    [1] = "~~Stancecheck~~",
+                    [2] = "/cast [exists] Raging Blow",
+                    [3] = "~~Rampage~~",
+                    [4] = "~~Charge~~",
+                    ["Type"] = "Action"
+                },
+                [5] = {
+                    [1] = "~~Stancecheck~~",
+                    [2] = "/cast [combat,@player] Ravager",
+                    [3] = "~~Rampage~~",
+                    [4] = "~~Charge~~",
+                    ["Type"] = "Action"
+                },
+                ["Repeat"] = 2,
+                ["Type"] = "Loop",
+                ["Disabled"] = false,
+                ["StepFunction"] = "Priority"
+            },
+            ["Repeat"] = 2,
+            ["Type"] = "Loop",
+            ["StepFunction"] = "Sequential"
+        }
+    },
+    ["InbuiltVariables"] = {
+        
+    }
+}
+

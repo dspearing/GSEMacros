@@ -1,0 +1,82 @@
+{
+    ["Variables"] = {
+        ["ShieldSlam"] = {
+            [1] = "/cast [combat] Shield Slam"
+        },
+        ["PullCharge"] = {
+            [1] = "/targetenemy [noharm][dead]",
+            [2] = "/startattack",
+            [3] = "/castsequence [nocombat]   reset=nocombat  Battle Shout, null",
+            [4] = "/castsequence [nocombat]   reset=combat  Heroic Throw, Charge, null",
+            [5] = "/cast [combat] Charge",
+            [6] = "/cast [combat] Ancestral Call"
+        },
+        ["ThunderClap"] = {
+            [1] = "/cast [combat] Thunder Clap"
+        },
+        ["StanceCheck"] = {
+            [1] = "/cast [nostance] Defensive Stance"
+        }
+    },
+    ["Actions"] = {
+        [1] = {
+            [1] = {
+                [1] = "~~StanceCheck~~",
+                [2] = "/castsequence [combat] Thunder Clap, Demoralizing Shout",
+                [3] = "~~ShieldSlam~~",
+                [4] = "~~PullCharge~~",
+                ["Type"] = "Action"
+            },
+            [2] = {
+                [1] = "~~StanceCheck~~",
+                [2] = "/castsequence [combat] Ignore Pain, Revenge",
+                [3] = "~~ThunderClap~~",
+                [4] = "~~PullCharge~~",
+                ["Type"] = "Action"
+            },
+            [3] = {
+                [1] = "~~StanceCheck~~",
+                [2] = "/castsequence [combat] Shield Block, Thunder Clap",
+                [3] = "~~ShieldSlam~~",
+                [4] = "~~PullCharge~~",
+                ["Type"] = "Action"
+            },
+            [4] = {
+                [1] = "~~StanceCheck~~",
+                [2] = "/castsequence [combat] Thunder Clap, Avatar",
+                [3] = "~~ShieldSlam~~",
+                [4] = "~~PullCharge~~",
+                ["Type"] = "Action"
+            },
+            [5] = {
+                [1] = "~~StanceCheck~~",
+                [2] = "/castsequence [combat] Shield Slam, Ignore Pain",
+                [3] = "~~ThunderClap~~",
+                [4] = "~~PullCharge~~",
+                ["Type"] = "Action"
+            },
+            [6] = {
+                [1] = "~~StanceCheck~~",
+                [2] = "/castsequence [combat] Thunder Clap, Revenge",
+                [3] = "~~ShieldSlam~~",
+                [4] = "~~PullCharge~~",
+                ["Type"] = "Action"
+            },
+            [7] = {
+                [1] = "~~StanceCheck~~",
+                [2] = "/castsequence [combat] Thunder Clap, Impending Victory",
+                [3] = "~~ShieldSlam~~",
+                [4] = "~~PullCharge~~",
+                ["Type"] = "Action"
+            },
+            ["Repeat"] = 2,
+            ["Type"] = "Loop",
+            ["StepFunction"] = "Sequential"
+        }
+    },
+    ["InbuiltVariables"] = {
+        ["Trinket1"] = true,
+        ["Trinket2"] = true
+    }
+}
+
